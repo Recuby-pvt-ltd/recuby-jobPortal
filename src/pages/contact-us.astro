@@ -1,0 +1,224 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/header/Header.astro";
+import Footer from "../components/footer/Footer.astro";
+import Smoke from "/smoke.gif";
+import Services from "/services.jpeg";
+import SideImage from "/Right.png";
+import SpaceJetImage from "/spacejet.png";
+import PlaneImage from "/plane.png";
+---
+
+<Layout title="Recuby">
+  <Header
+    className="fixed top-0 w-screen z-[80] h-32 bg-transparent"
+    activeTab={5}
+  />
+  <section class="py-28 first-section relative">
+    <div
+      class="px-10 h-full justify-center flex flex-col md:pl-20 text-white space-y-10"
+    >
+      <div class="w-[45%] pt-16">
+        <h1 class="text-2xl md:text-4xl lg:text-7xl font-bold heading-shadow">
+          <span>Contact Us</span>
+        </h1>
+      </div>
+      <p class="text-sm hidden md:block">
+        <a href="/" class="home-anchor-with-line">Home</a><span></span>
+        / Contact Us
+      </p>
+    </div>
+    <img
+      src={Services}
+      alt="background"
+      class="absolute top-0 -z-10 h-[65vh] w-screen"
+    />
+  </section>
+  <section class="py-28">
+    <div class="h-full justify-center flex flex-col px-10 md:pl-20 text-white">
+      <div class="pt-4">
+        <h2 class="text-2xl gray-text-color font-semibold">
+          <span>Contact Mission Control</span>
+        </h2>
+      </div>
+      <div class="border-[#515a69] border-2 w-1/6 my-2"></div>
+    </div>
+  </section>
+  <section class="w-full px-28 pb-24">
+    <div class="w-full shadow-lg rounded-lg py-16 flex relative">
+      <div class="absolute bottom-[15rem]">
+        <img alt="rocket-img" src={SpaceJetImage} class="h-64 z-10" />
+        <img
+          alt="rocket-img"
+          src={SideImage}
+          class="h-64 absolute -z-10 top-0 left-[2rem]"
+        />
+        <img
+          alt="rocket-img"
+          src={PlaneImage}
+          class="h-[18rem] w-[7rem] 2xl:h-[23rem] 2xl:w-[8rem] absolute -z-10 left-[4.1rem] -top-[5rem]"
+        />
+        <img
+          alt="rocket-img"
+          src={SideImage}
+          class="h-64 absolute -z-10 top-0 right-[2rem]"
+        />
+      </div>
+      <img
+        src={Smoke}
+        alt="somke"
+        class="absolute bottom-0 left-0 -scale-x-100 -z-10"
+      />
+      <div class="w-1/2"></div>
+      <div class="w-[500px] px-4">
+        <form action="" class="space-y-3">
+          <input
+            class="contact-page-form-input"
+            type="text"
+            placeholder="Full Name"
+          />
+          <input
+            class="contact-page-form-input"
+            type="text"
+            placeholder="Company Name"
+          />
+          <input
+            class="contact-page-form-input"
+            type="text"
+            placeholder="Budget"
+          />
+          <input
+            class="contact-page-form-input"
+            type="text"
+            placeholder="Phone*"
+          />
+          <input
+            class="contact-page-form-input"
+            type="text"
+            placeholder="Email"
+          />
+          <textarea
+            placeholder="Message"
+            class="rounded-[36px] input-bg pt-[20px] pl-[70px] border-none h-[5rem] w-full"
+          ></textarea>
+          <button
+            class="text-white bg-[#F6B807] px-12 py-2 rounded-full w-full font-semibold text-lg"
+            >Submit</button
+          >
+        </form>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  body,
+  html {
+    overflow-x: hidden;
+  }
+  .first-section {
+    width: 100vw;
+  }
+  .input-bg {
+    background-color: rgba(37, 119, 255, 0.078);
+  }
+  .contact-page-form-input {
+    border-radius: 36px;
+    background-color: rgba(37, 119, 255, 0.078);
+    width: 100%;
+    height: 72px;
+    border: none;
+    padding-left: 70px;
+    color: black;
+    font-size: 16px;
+  }
+  .input-bg::placeholder,
+  .contact-page-form-input::placeholder {
+    color: black;
+  }
+  .third-section,
+  .fourth-section {
+    background-color: #00b4d5;
+  }
+  .styled-input {
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    color: white;
+    width: 16rem;
+    margin-right: 1rem;
+  }
+  .styled-input::placeholder {
+    color: white;
+  }
+  .home-anchor-with-line::before {
+    content: "";
+    width: 123px;
+    border-top: 1px solid white;
+    height: 2px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: -10px;
+    position: relative;
+    top: -2px;
+  }
+  .heading-shadow {
+    text-shadow: 0px 8px 13px rgb(12 61 140 / 43%);
+  }
+  .gray-text-color {
+    color: #515a69;
+  }
+  .styled-bullet-one::before {
+    content: "";
+    background-color: #fcb813;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    top: 2px;
+    position: relative;
+    border-radius: 50% 0% 0% 50%;
+    left: -2px;
+  }
+  .styled-bullet-two::before {
+    content: "";
+    background-color: #00b4d5;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    top: 2px;
+    left: -5px;
+    position: relative;
+    border-radius: 50% 50% 0% 0%;
+  }
+
+  .fourth-section-subheading {
+    font-weight: 600;
+    color: #00b4d5;
+  }
+  .blue-color-text {
+    color: #00b4d5;
+  }
+  .culture-section-card {
+    background-color: #00b4d5;
+    box-shadow: 38px 0px 54px 0px rgba(0, 155, 194, 0.45);
+    width: 90%;
+    text-align: center;
+    padding: 4rem 0;
+  }
+  .job-card {
+    border: solid 1px #ddd;
+    margin: 2rem 2rem;
+    padding: 2rem 1rem;
+    position: relative;
+  }
+  .job-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #0fa7d5;
+  }
+</style>

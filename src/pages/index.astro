@@ -1,0 +1,241 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AnimateBackground from "../layouts/AnimateBackground";
+import Rocket from "@components/rocket";
+import BackgroundScene from "@components/backgroundScene";
+import Header from "../components/header/Header.astro";
+import Footer from "../components/footer/Footer.astro";
+import StartUpExpert from "/start-up-expert.jpg";
+import SoftwareProductHiring from "/access.png";
+import ExecutiveSearch from "/EXECUTIVE.png";
+import QualtiyTrust from "/quality-you-can-trust.png";
+import RecruitBetterWay from "public/better-way-to-recruit-2.png";
+import YourSearch from "public/your-search-our-solution-2.png";
+import SelectImg from "/select.png";
+---
+
+<Layout title="Recuby">
+  <Header
+    className="fixed top-0 w-screen z-[80] bg-transparent"
+    activeTab={1}
+  />
+  <div class="hidden lg:block">
+    <Rocket
+      client:load
+      className="fixed flex bottom-[8rem] right-[16vw] 2xl:right-[10vw] z-40"
+    />
+    <BackgroundScene client:load />
+  </div>
+  <AnimateBackground client:load>
+    <section class="h-[100vh]">
+      <div class="h-full pt-20 flex flex-col pl-20 text-[#2B8AAC]">
+        <div class="w-[45%]">
+          <p class="text-3xl font-semibold">Where Talent</p>
+          <p class="text-2xl md:text-4xl lg:text-6xl font-bold">
+            Meets Opportunity
+          </p>
+        </div>
+        <div class="border-blue-900 border-4 w-1/6 my-8"></div>
+        <div class="text-[#2B8AAC] md:text-lg lg:text-x space-y-4">
+          <p>
+            Connecting job seekers and employers for building a better
+            workforce.
+          </p>
+          <p>
+            If you’re looking for a new position or wanting to hire the right
+            candidate, we can help.
+          </p>
+        </div>
+        <div class="space-y-5 pt-10">
+          <p class="text-[#2B8AAC]">Find your future with us.</p>
+          <button
+            class="capitalize text-white bg-[#F6B807] px-6 py-2 rounded-full font-semibold text-lg"
+            >Get in touch</button
+          >
+        </div>
+      </div>
+    </section>
+    <section class="h-[100vh]">
+      <div class="h-full justify-center flex flex-col pl-20 text-white">
+        <p class="w-[95%] text-3xl font-semibold">Our Services</p>
+        <div class="border-white border-2 w-1/5 mt-4"></div>
+        <div class="grid grid-cols-2 my-16 text-center w-2/5">
+          <div
+            class="px-8 py-16 border-r-2 border-b-2 flex flex-col justify-center items-center"
+          >
+            <img
+              src={ExecutiveSearch}
+              class="h-28 w-28 rounded-full"
+              alt="executive search"
+            /><p>Executive Search</p>
+          </div>
+          <div
+            class="px-8 py-16 border-b-2 flex flex-col justify-center items-center"
+          >
+            <img
+              src={SoftwareProductHiring}
+              class="h-28 rounded-full"
+              alt="software product hiring"
+            /><p>Software Product Hiring</p>
+          </div>
+          <div
+            class="px-8 py-16 border-r-2 flex flex-col justify-center items-center"
+          >
+            <img
+              src={StartUpExpert}
+              class="h-28 rounded-full"
+              alt="start up expert"
+            /><p>Tech Startup Expert</p>
+          </div>
+          <div class="px-8 py-16 flex flex-col justify-center items-center">
+            <img src={SelectImg} class="h-28 rounded-full" alt="rpo" /><p>
+              RPO
+            </p>
+          </div>
+        </div>
+        <div class="w-2/3">
+          Recuby is your ultimate recruitment solution where you can find the
+          right candidate for your organization to take your organization from
+          oblivion to the limelight. Our candidate inspection is for small,
+          medium, and large product-based companies within their hiring budget.
+        </div>
+      </div>
+    </section>
+    <section class="h-[100vh]">
+      <div class="h-full justify-center flex flex-col pl-20 text-white">
+        <p class="w-[95%] text-3xl font-semibold">
+          Find a Perfect Professional Match!
+        </p>
+        <div class="border-white border-2 w-1/5 mt-4"></div>
+        <div class="w-2/3 my-6">
+          Our mission is to help candidates find better jobs and recruiters find
+          better candidates. We believe in building long- lasting relationships
+          with our customers. With a wide variety of job positions for every
+          skill set and qualified candidates - we’re confident you”ll find the
+          perfect match.
+        </div>
+        <div class="grid grid-cols-3 text-center w-2/5">
+          <div class="p-8 flex flex-col justify-center items-center">
+            <img
+              src={QualtiyTrust}
+              alt="Quality, you can trust"
+              class="h-[6rem]"
+            /><p class="text-lg">Quality, you can trust</p>
+          </div>
+          <div class="p-8 flex flex-col justify-center items-center">
+            <img
+              src={RecruitBetterWay}
+              alt="A better way to recruit"
+              class="h-[6rem]"
+            /><p class="text-lg">A better way to recruit</p>
+          </div>
+          <div class="p-8 flex flex-col justify-center items-center">
+            <img
+              src={YourSearch}
+              alt="Your Search, Our Solutions"
+              class="h-[6rem]"
+            /><p class="text-lg">Your Search, Our Solutions</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="h-[100vh]">
+      <div class="h-full justify-center flex flex-col pl-20 text-white">
+        <p class="w-[95%] text-3xl font-semibold">Mission</p>
+        <div class="border-white border-2 w-1/5 mt-4"></div>
+        <div class="w-2/3 my-6">
+          Recuby's mission is to keep selecting the finest candidates for your
+          company after identifying your business goals, understanding the
+          requirements of your staff, and delivering you the quality employees
+          that will help you fulfill your business goals. For example, finding
+          the ideal candidates through popular job portals, advertising your
+          business on talent communities, doing the candidate assessments before
+          sending them to your office for interviews, and improving the
+          candidates' interview experience. The above are some of the missions
+          we follow daily to get you ahead of your industry competition. Our
+          mission is your power and profit.
+        </div>
+      </div>
+    </section>
+    <section class="h-[100vh]">
+      <div class="h-full justify-center flex flex-col pl-20 text-white">
+        <p class="w-[95%] text-3xl font-semibold">Vision</p>
+        <div class="border-white border-2 w-1/5 mt-4"></div>
+        <div class="w-2/3 my-6">
+          Recuby aims to capture the entire market of the recruitment industry.
+          As of now, only 43% of the top companies are taking the recruitment
+          services, but we want to focus not only on the 43% but also on the
+          rest of the 57% market to serve the maximum businesses worldwide. Our
+          network is now spread on the Indian continent, but soon it will spread
+          across the globe with our growing team. Your business goals are our
+          organization's goals, and we will market them for your welfare.
+        </div>
+      </div>
+    </section>
+    <section class="h-[100vh]">
+      <div class="h-full justify-center flex flex-col pl-20 text-white">
+        <p class="w-[95%] text-3xl font-semibold">Contact</p>
+        <div class="border-white border-2 w-1/5 mt-4"></div>
+        <div class="w-2/3 my-6">Join with us to conquer the universe.</div>
+        <div class="w-full">
+          <form action="">
+            <div class="flex space-x-3">
+              <input
+                type="text"
+                placeholder="Name"
+                class="styled-input py-2 px-8 h-12"
+              /><input
+                class="styled-input py-2 px-8 h-12"
+                type="text"
+                placeholder="Company Name"
+              />
+            </div>
+            <div class="flex space-x-3 my-4">
+              <input
+                class="styled-input py-2 px-8 h-12"
+                type="email"
+                name=""
+                id=""
+                placeholder="Email"
+              />
+              <input
+                class="styled-input py-2 px-8 h-12"
+                name=""
+                id=""
+                placeholder="Phone"
+              />
+            </div>
+            <div class="mt-4 flex items-end space-x-3 w-full">
+              <textarea
+                name=""
+                id=""
+                placeholder="Message"
+                class="styled-input py-4 px-8 resize-none w-60 h-48"></textarea>
+              <button
+                class="text-white bg-[#F6B807] px-12 py-2 rounded-full w-60 font-semibold text-lg"
+                >Submit</button
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </AnimateBackground>
+  <Footer />
+</Layout>
+
+<style>
+  body,
+  html {
+    overflow-x: hidden;
+  }
+  h1 {
+    margin: 2rem 0;
+  }
+  .styled-input {
+    border-radius: 36px;
+    background-color: rgba(9, 76, 94, 0.5);
+    border: none;
+    color: #fff;
+  }
+</style>

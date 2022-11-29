@@ -1,0 +1,61 @@
+---
+export interface Props {
+  className: string;
+  activeTab: Number;
+}
+
+import RecubyIcon from "/recubylogo.png";
+
+const { className, activeTab } = Astro.props;
+---
+
+<header class={className}>
+  <div class="px-6 py-4 flex justify-between items-center z-20 bg-white">
+    <div>
+      <img src={RecubyIcon} alt="recuby icon" class="h-7" />
+    </div>
+    <nav class="hidden md:block">
+      <a
+        class={`px-4 text-sm font-bold py-2 ` +
+          (activeTab === 1 ? "text-[#F6B807]" : "text-black")}
+        href="/">HOME</a
+      >
+      <a
+        class={`px-4 text-sm font-bold py-2 ` +
+          (activeTab === 2 ? "text-[#F6B807]" : "text-black")}
+        href="/about-us">ABOUT US</a
+      >
+      <a
+        class={`px-4 text-sm font-bold py-2 ` +
+          (activeTab === 3 ? "text-[#F6B807]" : "text-black")}
+        href="/services">SERVICES</a
+      >
+      <a
+        class={`px-4 text-sm font-bold py-2 ` +
+          (activeTab === 4 ? "text-[#F6B807]" : "text-black")}
+        href="/careers">CAREERS</a
+      >
+      <a
+        class={`px-4 text-sm font-bold py-2 ` +
+          (activeTab === 5 ? "text-[#F6B807]" : "text-black")}
+        href="/contact-us">CONTACT US</a
+      >
+      <a
+        class={`px-4 text-sm font-bold py-2 ` +
+          (activeTab === 6 ? "text-[#F6B807]" : "text-black")}
+        href="/job-portal">JOB PORTAL</a
+      >
+    </nav>
+  </div>
+</header>
+
+<style>
+  .moving-header {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    background-repeat: repeat-x;
+    transform: translate3d(0, 0, 0);
+  }
+</style>
