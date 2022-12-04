@@ -1,0 +1,197 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/header/Header.astro";
+import Footer from "../components/footer/Footer.astro";
+import Services from "/services.jpeg";
+import JobCard from "@components/careerPageCard";
+import directorLvl5 from "../../public/career-page-content/director-lvl5.json";
+import seniorTechnicalRecruiterLvl2 from "../../public/career-page-content/senior-technical-recruiter-lvl2.json";
+import leadRecruiterLvl2 from "../../public/career-page-content/lead-recruiter-lvl2.json";
+import teamLeadLvl3 from "../../public/career-page-content/team-lead-lvl3.json";
+import managerLvl4 from "../../public/career-page-content/manager-lvl4.json";
+import technicalRecruiterLvl1 from "../../public/career-page-content/technical-recruiter-lvl1.json";
+---
+
+<Layout title="Recuby">
+  <Header
+    className="fixed top-0 w-screen z-[80] h-32 bg-transparent"
+    activeTab={4}
+  />
+  <section class="py-28 first-section relative">
+    <div
+      class="px-10 h-full justify-center flex flex-col md:pl-20 text-white space-y-10"
+    >
+      <div class="w-[45%] pt-16">
+        <h1 class="text-2xl md:text-4xl lg:text-7xl font-bold heading-shadow">
+          <span>Career</span>
+        </h1>
+      </div>
+      <p class="text-sm hidden md:block">
+        <a href="/" class="home-anchor-with-line">Home</a><span></span>
+        / Career
+      </p>
+      <div class="text-white md:text-lg lg:text-xs md:w-[40rem]">
+        <p>
+          Explore the world of opportunities by joining our team of talented
+          recruiters. We are an equal opportunity organization where we
+          encourage a performance-oriented work culture and diversity within the
+          workforce. We promote personal growth and work-life balance to ensure
+          quality living for those who are our most important asset- our human
+          resource.
+        </p>
+      </div>
+    </div>
+    <img
+      src={Services}
+      alt="background"
+      class="absolute top-0 -z-10 h-[65vh] w-screen object-cover md:object-fill"
+    />
+  </section>
+  <section class="bg-white">
+    <div class="w-full">
+      <div
+        class="w-full md:pl-24 md:px-16 md:py-24 text-left grid grid-cols-1 md:grid md:grid-cols-3"
+      >
+        <JobCard client:load jobPosting={technicalRecruiterLvl1} />
+        <JobCard client:load jobPosting={teamLeadLvl3} />
+        <JobCard client:load jobPosting={seniorTechnicalRecruiterLvl2} />
+        <JobCard client:load jobPosting={teamLeadLvl3} />
+        <JobCard client:load jobPosting={managerLvl4} />
+        <JobCard client:load jobPosting={directorLvl5} />
+      </div>
+    </div>
+  </section>
+  <section class="bg-[#2B8AAC] py-14">
+    <div class="h-full justify-center flex flex-col px-5 lg:pl-20 text-white">
+      <form action="">
+        <p class="w-[95%] text-3xl font-semibold my-4">Contact</p>
+        <div class="w-full">
+          <div class="lg:flex w-full space-y-3 lg:space-x-3 lg:space-y-0">
+            <input
+              type="text"
+              placeholder="Name"
+              class="styled-input py-2 h-12 w-full lg:w-[16rem]"
+            /><input
+              class="styled-input py-2 h-12 w-full lg:w-[16rem]"
+              type="text"
+              placeholder="Company Name"
+            />
+          </div>
+          <div class="lg:flex w-full space-y-3 lg:space-x-3 my-4 lg:space-y-0">
+            <input
+              class="styled-input py-2 h-12 w-full lg:w-[16rem]"
+              name=""
+              id=""
+              placeholder="Budget"
+            />
+            <input
+              class="styled-input py-2 h-12 w-full lg:w-[16rem]"
+              name=""
+              id=""
+              placeholder="Phone"
+            />
+          </div>
+          <div
+            class="mt-4 space-y-3 lg:flex lg:items-end lg:space-x-3 w-full lg:space-y-0"
+          >
+            <input
+              class="styled-input py-2 h-12 w-full lg:w-[16rem]"
+              type="email"
+              name=""
+              id=""
+              placeholder="Email"
+            />
+            <textarea
+              name=""
+              id=""
+              placeholder="Message"
+              class="styled-input py-4 resize-none h-16 w-full lg:w-[16rem]"
+            ></textarea>
+          </div>
+        </div>
+        <button
+          class="text-white bg-[#F6B807] py-2 rounded-full w-32 font-semibold text-base my-6"
+          >Submit</button
+        >
+      </form>
+    </div>
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  body,
+  html {
+    overflow-x: hidden;
+  }
+  .first-section {
+    width: 100vw;
+  }
+
+  .styled-input {
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    color: white;
+    margin-right: 1rem;
+  }
+  .styled-input:focus {
+    outline: none;
+  }
+  .styled-input::placeholder {
+    color: white;
+  }
+  .home-anchor-with-line::before {
+    content: "";
+    width: 123px;
+    border-top: 1px solid white;
+    height: 2px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: -10px;
+    position: relative;
+    top: -2px;
+  }
+  .heading-shadow {
+    text-shadow: 0px 8px 13px rgb(12 61 140 / 43%);
+  }
+
+  .styled-bullet-one::before {
+    content: "";
+    background-color: #fcb813;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    top: 2px;
+    position: relative;
+    border-radius: 50% 0% 0% 50%;
+    left: -2px;
+  }
+  .styled-bullet-two::before {
+    content: "";
+    background-color: #2b8aac;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    top: 2px;
+    left: -5px;
+    position: relative;
+    border-radius: 50% 50% 0% 0%;
+  }
+
+  .job-card {
+    border: solid 1px #ddd;
+    margin: 2rem 2rem;
+    padding: 2rem 1rem;
+    position: relative;
+  }
+  .job-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #2b8aac;
+  }
+</style>

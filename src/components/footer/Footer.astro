@@ -1,0 +1,59 @@
+---
+import FacebookIcon from "/Facebook.png";
+import InstagramIcon from "/Instagram.png";
+import LinkedInIcon from "/LinkedIn.png";
+import TwitterIcon from "/Twitter.png";
+import LocationIcon from "/Location.png";
+import MailIcon from "/Mail.png";
+import PhoneIcon from "/footer-phone.png";
+---
+
+<footer class="w-screen py-3 px-4 text-black">
+  <div
+    class="grid grid-cols-1 space-y-10 md:space-y-0 md:grid-cols-3 font-semibold p-8"
+  >
+    <div class="flex flex-col">
+      <h2>Contact Info</h2>
+      <div class="mt-6 font-semibold space-y-4 text-sm">
+        <p class="flex items-center space-x-2">
+          <img src={LocationIcon} alt="address" class="h-[2rem]" />
+          <span>HD299, Noida sector 135<br /> Uttar Pradesh 201305</span>
+        </p>
+        <p class="flex items-center space-x-2">
+          <img src={MailIcon} alt="mail" class="h-[2rem]" /><span
+            >hr@recuby.com</span
+          >
+        </p>
+        <p class="flex items-center space-x-2">
+          <img src={PhoneIcon} alt="phone" class="h-[2rem]" /><span
+            >+917011516657</span
+          >
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col">
+      <h2>Usefull Links</h2>
+      <div class="flex space-x-12 mt-6 font-semibold">
+        <div class="space-y-4">
+          <p><a href="/">Home</a></p>
+          <p><a href="/about-us">About Us</a></p>
+          <p><a href="/services">Services</a></p>
+        </div>
+        <div class="space-y-4">
+          <p><a href="/careers">Careers</a></p>
+          <p><a href="/contact-us">Contact Us</a></p>
+          <p><a href="/job-portal">Job Portal</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col">
+      <h2>Follow Us</h2>
+      <div class="flex space-x-4 mt-3">
+        <img src={InstagramIcon} alt="Instagram" class="w-[2rem]" />
+        <img src={LinkedInIcon} alt="LinkedIn" class="w-[2rem]" />
+        <img src={TwitterIcon} alt="Twitter" class="w-[2rem]" />
+        <img src={FacebookIcon} alt="Facebook" class="w-[2rem]" />
+      </div>
+    </div>
+  </div>
+</footer>

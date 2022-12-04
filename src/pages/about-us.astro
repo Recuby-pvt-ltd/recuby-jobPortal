@@ -1,0 +1,399 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/header/Header.astro";
+import Footer from "../components/footer/Footer.astro";
+import ConultImg from "/consult.png";
+import AccessImg from "/access.png";
+import OnboardImg from "/onboard.png";
+import SelectImg from "/select.png";
+import ChartImg from "/pie.png";
+import Quality from "/agile.png";
+import Productive from "/complaint.png";
+import Lean from "/lean.png";
+import Proactive from "/proactive.png";
+import Services from "/services.jpeg";
+import WholeRocket from "/whole-rocket.png";
+import Smoke from "/smoke.gif";
+---
+
+<Layout title="Recuby">
+  <Header
+    className="fixed top-0 w-screen z-[80] h-32 bg-transparent"
+    activeTab={2}
+  />
+  <section class="py-28 first-section relative">
+    <div
+      class="px-10 h-full justify-center flex flex-col md:pl-20 text-white space-y-10"
+    >
+      <div class="w-[45%] pt-16">
+        <h1 class="text-2xl md:text-4xl lg:text-7xl font-bold heading-shadow">
+          <span>About Us</span>
+        </h1>
+      </div>
+      <p class="text-sm hidden md:block">
+        <a href="/" class="home-anchor-with-line">Home</a><span></span>
+        / About Us
+      </p>
+      <div class="text-white md:text-lg lg:text-xs md:w-[40rem]">
+        <p>
+          We're a team of young and talented recruiters who have mastered the
+          art of recruitment.Try our services today and become a part of a
+          professional system that delivers quality employees forever.
+        </p>
+      </div>
+    </div>
+    <img
+      src={Services}
+      alt="background"
+      class="absolute top-0 -z-10 h-[65vh] w-screen object-cover md:object-fill"
+    />
+  </section>
+  <section class="mt-14 py-10">
+    <div class="flex items-center relative w-full">
+      <div
+        class="h-full justify-center flex flex-col px-10 md:pl-20 text-white"
+      >
+        <div class="pt-4">
+          <h2 class="text-2xl gray-text-color font-semibold">
+            <span> Find your Business with us</span>
+          </h2>
+        </div>
+        <div class="border-[#515a69] bg-[#515a69] border-2 w-2/5 md:w-1/6 my-2">
+        </div>
+        <div
+          class="gray-text-color md:text-lg lg:text-xs md:w-[25rem] space-y-2"
+        >
+          <p>
+            Recuby is here to save you from the endless and hectic hiring
+            process. We are a reputed recruitment consultancy company.
+          </p><p>
+            Our journey began on 21 June 2022, intending to provide a proficient
+            workforce to the growing companies. Our firm's primary motto is to
+            supply the best applicant for the product-based industry.
+          </p><p>
+            Recuby is your ultimate recruitment solution where you can find the
+            right candidate for your organization to take your organization from
+            oblivion to the limelight.
+          </p>
+        </div>
+      </div>
+      <div class="hidden lg:block h-[25rem] ml-[25rem]">
+        <img src={WholeRocket} alt="rocket" class="h-full" />
+      </div>
+      <img
+        src={Smoke}
+        alt="somke"
+        class="absolute w-[80%] bottom-0 right-0 -z-10 hidden md:block"
+      />
+    </div>
+  </section>
+  <section class="third-section py-10 relative">
+    <div class="w-full text-center text-white">
+      <h2 class="font-semibold text-2xl py-2 tracking-wide">
+        <span>Positions We Hire</span>
+      </h2>
+      <div class="w-full px-5 md:px-16 flex">
+        <div class="text-left space-y-4">
+          <h2><span class="text-sm">Software engineers</span></h2>
+          <h2><span class="text-sm">UI/UX designers</span></h2>
+          <h2><span class="text-sm">Tech leads</span></h2>
+          <h2><span class="text-sm">Engineering managers</span></h2>
+          <h2><span class="text-sm">Software developers in testing</span></h2>
+          <h2>
+            <span class="text-sm">QA engineers, Big data developers</span>
+          </h2>
+          <h2><span class="text-sm">DevOps engineers</span></h2>
+        </div>
+        <div class="hidden md:block absolute-center">
+          <img src={ChartImg} alt="chart" class="h-[700px]" />
+        </div>
+        <div class="text-right space-y-4 ml-auto">
+          <h2><span class="text-sm">Architects,</span></h2>
+          <h2><span class="text-sm">Principle software architects</span></h2>
+          <h2><span class="text-sm">Product Managers</span></h2>
+          <h2><span class="text-sm">Program Manager</span></h2>
+          <h2><span class="text-sm">Project Managers</span></h2>
+          <h2><span class="text-sm">Business/data Analys</span></h2>
+          <h2><span class="text-sm">Data Scientists</span></h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-12 bg-white">
+    <div class="w-full text-center gray-text-color">
+      <h2 class="font-semibold text-2xl tracking-wide md:my-2">
+        <span class="text-shadow">How do we make it happen?</span>
+      </h2>
+      <div
+        class="w-full pl-24 md:px-16 md:py-24 text-left grid grid-cols-1 lg:flex lg:justify-end md:grid md:grid-cols-2"
+      >
+        <div class="min-w-[20vw] my-5 md:my-0">
+          <img src={ConultImg} alt="consult" width="100px" />
+          <p class="fourth-section-subheading">CONSULT</p><div
+            class="space-y-3 text-sm"
+          >
+            <div class="styled-bullet-two">
+              <span>Industry Benchmarking</span>
+            </div>
+            <div class="styled-bullet-two">
+              <span>Market Mapping</span>
+            </div>
+            <div class="styled-bullet-two">
+              <span>Organisation Design</span>
+            </div>
+            <div class="styled-bullet-two">
+              <span> Budgeting</span>
+            </div>
+            <div class="styled-bullet-two">
+              <span>Compensation</span>
+            </div>
+          </div>
+        </div>
+        <div class="min-w-[20vw] my-5 md:my-0">
+          <img src={AccessImg} alt="access" width="100px" />
+          <p class="fourth-section-subheading">ACCESS</p><div
+            class="space-y-3 text-sm text-left"
+          >
+            <div class="styled-bullet-two"><span> Talent Landscape</span></div>
+            <div class="styled-bullet-two"><span> Requirement Plan</span></div>
+            <div class="styled-bullet-two"><span> Search Strategy</span></div>
+            <div class="styled-bullet-two">
+              <span>Sourcing and Head-hunting</span>
+            </div>
+            <div class="styled-bullet-two">
+              <span> Channel Management</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="min-w-[20vw] my-5 md:my-0">
+          <img src={SelectImg} alt="select" width="100px" />
+          <p class="fourth-section-subheading my-1">SELECT</p><div
+            class="space-y-3 text-sm"
+          >
+            <div class="styled-bullet-two">
+              <span>Application Management</span>
+            </div>
+            <div class="styled-bullet-two">
+              <span>Stakeholder Management</span>
+            </div>
+            <div class="styled-bullet-two">
+              <span>Funnelling and Selection</span>
+            </div>
+            <div class="styled-bullet-two">
+              <span>Decisioning and Negotiation</span>
+            </div>
+            <div class="styled-bullet-two"><span> Reference Checks</span></div>
+          </div>
+        </div>
+        <div class="min-w-[20vw] my-5 md:my-0">
+          <img src={OnboardImg} alt="onboard" width="100px" />
+          <p class="fourth-section-subheading">ONBOARD</p><div
+            class="space-y-3 text-sm"
+          >
+            <div class="styled-bullet-two"><span>Offer Management</span></div>
+            <div class="styled-bullet-two">
+              <span>Candidate Engagement</span>
+            </div>
+            <div class="styled-bullet-two">
+              <span>BGV and Documentation</span>
+            </div>
+            <div class="styled-bullet-two">
+              <span> SLA and Compliance</span>
+            </div>
+            <div class="styled-bullet-two">
+              <span>Analytics and Reporting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-12 bg-[#ebeef2]">
+    <div class="w-full">
+      <h2
+        class="font-semibold text-2xl tracking-wide text-[#2B8AAC] text-center"
+      >
+        <span>Work, Culture and Values</span>
+      </h2>
+      <div class="md:flex text-white justify-center mt-10">
+        <div class="md:w-[40%] px-4 space-y-10">
+          <div class="culture-section-card">
+            <img
+              class="absolute top-[-2rem] left-[-2rem]"
+              src={Quality}
+              alt="Quality"
+            /><span>Quality</span>
+          </div>
+          <div class="culture-section-card">
+            <img
+              class="absolute top-[-2rem] left-[-2rem]"
+              src={Productive}
+              alt="Productivity"
+            /><span>Productivity</span>
+          </div>
+        </div>
+        <div class="md:w-[40%] px-4 space-y-10 mt-10 md:mt-0">
+          <div class="culture-section-card">
+            <img
+              class="absolute top-[-2rem] left-[-2rem] md:left-auto md:right-[-2rem]"
+              src={Lean}
+              alt="Transparency"
+            /><span>Transparency</span>
+          </div>
+          <div class="culture-section-card">
+            <img
+              class="absolute top-[-2rem] left-[-2rem] md:left-auto md:right-[-2rem]"
+              src={Proactive}
+              alt="Respect"
+            /><span>Respect</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-[#00b4d5] py-14">
+    <div class="h-full justify-center flex flex-col px-5 lg:pl-20 text-white">
+      <form action="">
+        <p class="w-[95%] text-3xl font-semibold my-4">Contact</p>
+        <div class="w-full">
+          <div class="lg:flex w-full space-y-3 lg:space-x-3 lg:space-y-0">
+            <input
+              type="text"
+              placeholder="Name"
+              class="styled-input py-2 h-12 w-full lg:w-[16rem]"
+            /><input
+              class="styled-input py-2 h-12 w-full lg:w-[16rem]"
+              type="text"
+              placeholder="Company Name"
+            />
+          </div>
+          <div class="lg:flex w-full space-y-3 lg:space-x-3 my-4 lg:space-y-0">
+            <input
+              class="styled-input py-2 h-12 w-full lg:w-[16rem]"
+              name=""
+              id=""
+              placeholder="Budget"
+            />
+            <input
+              class="styled-input py-2 h-12 w-full lg:w-[16rem]"
+              name=""
+              id=""
+              placeholder="Phone"
+            />
+          </div>
+          <div
+            class="mt-4 space-y-3 lg:flex lg:items-end lg:space-x-3 w-full lg:space-y-0"
+          >
+            <input
+              class="styled-input py-2 h-12 w-full lg:w-[16rem]"
+              type="email"
+              name=""
+              id=""
+              placeholder="Email"
+            />
+            <textarea
+              name=""
+              id=""
+              placeholder="Message"
+              class="styled-input py-4 resize-none h-16 w-full lg:w-[16rem]"
+            ></textarea>
+          </div>
+        </div>
+      </form>
+      <button
+        class="text-white bg-[#F6B807] py-2 rounded-full w-32 font-semibold text-base my-6"
+        >Submit</button
+      >
+    </div>
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  .absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .third-section,
+  .fourth-section {
+    background-color: #00b4d5;
+  }
+  .styled-input {
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    color: white;
+    margin-right: 1rem;
+  }
+  .styled-input:focus {
+    outline: none;
+  }
+  .styled-input::placeholder {
+    color: white;
+  }
+  .home-anchor-with-line::before {
+    content: "";
+    width: 123px;
+    border-top: 1px solid white;
+    height: 2px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: -10px;
+    position: relative;
+    top: -2px;
+  }
+  .heading-shadow {
+    text-shadow: 0px 8px 13px rgb(12 61 140 / 43%);
+  }
+  .gray-text-color {
+    color: #515a69;
+  }
+  .styled-bullet-one::before {
+    content: "";
+    background-color: #fcb813;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    top: 2px;
+    position: relative;
+    border-radius: 50% 0% 0% 50%;
+    left: -2px;
+  }
+  .styled-bullet-two::before {
+    content: "";
+    background-color: #00b4d5;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    top: 2px;
+    left: -5px;
+    position: relative;
+    border-radius: 50% 50% 0% 0%;
+  }
+
+  .fourth-section-subheading {
+    font-weight: bold;
+  }
+  .culture-section-card {
+    background-color: #00b4d5;
+    box-shadow: 38px 0px 54px 0px rgb(0 72 194 / 45%);
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.07rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4rem 0;
+    position: relative;
+  }
+  .culture-section-card:hover {
+    box-shadow: none;
+  }
+</style>
