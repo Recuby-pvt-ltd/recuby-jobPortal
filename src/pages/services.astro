@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/header/Header.astro";
+import Header from "../components/header";
 import Footer from "../components/footer/Footer.astro";
 import ConultImg from "/consult.png";
 import AssessImg from "/assess.png";
@@ -13,12 +13,13 @@ import Services from "/services.jpeg";
   <Header
     className="fixed top-0 w-screen z-[80] h-32 bg-transparent"
     activeTab={3}
+    client:load
   />
-  <section class="py-28 first-section relative">
+  <section class="py-28 first-section relative h-[65vh]">
     <div
       class="px-10 h-full justify-center flex flex-col md:pl-20 text-white space-y-10"
     >
-      <div class="w-[45%] pt-16">
+      <div class="md:w-[45%] pt-16">
         <h1 class="text-2xl md:text-4xl lg:text-7xl font-bold heading-shadow">
           <span>Our Services</span>
         </h1>
@@ -39,16 +40,16 @@ import Services from "/services.jpeg";
     <img
       src={Services}
       alt="background"
-      class="absolute top-0 -z-10 h-[65vh] w-screen"
+      class="absolute top-0 -z-10 h-[65vh] w-screen object-cover lg:object-fill"
     />
   </section>
   <section class="py-12 bg-white">
     <div class="w-full text-center">
-      <h2 class="font-semibold text-2xl tracking-wide md:my-2 blue-color-text">
+      <h2 class="font-semibold text-2xl tracking-wide lg:my-2 blue-color-text">
         <span class="text-shadow">Services We Provide</span>
       </h2>
       <div
-        class="w-full pl-24 md:px-16 md:py-24 text-center grid grid-cols-1 lg:flex md:grid md:grid-cols-2"
+        class="w-full px-5 md:pl-24 md:px-16 md:py-5 lg:py-24 text-center grid grid-cols-1 gap-3 lg:flex md:grid md:grid-cols-2"
       >
         <div
           class="min-w-[20vw] my-5 md:my-0 flex flex-col items-center justify-center"
@@ -93,38 +94,40 @@ import Services from "/services.jpeg";
     </div>
   </section>
   <section class="bg-[#00b4d5] py-14">
-    <div class="h-full justify-center flex flex-col pl-20 text-white">
+    <div class="h-full justify-center flex flex-col px-5 lg:pl-20 text-white">
       <form action="">
         <p class="w-[95%] text-3xl font-semibold my-4">Contact</p>
         <div class="w-full">
-          <div class="flex space-x-3">
+          <div class="lg:flex w-full space-y-3 lg:space-x-3 lg:space-y-0">
             <input
               type="text"
               placeholder="Name"
-              class="styled-input py-2 h-12"
+              class="styled-input py-2 h-12 w-full lg:w-[16rem]"
             /><input
-              class="styled-input py-2 h-12"
+              class="styled-input py-2 h-12 w-full lg:w-[16rem]"
               type="text"
               placeholder="Company Name"
             />
           </div>
-          <div class="flex space-x-3 my-4">
+          <div class="lg:flex w-full space-y-3 lg:space-x-3 my-4 lg:space-y-0">
             <input
-              class="styled-input py-2 h-12"
+              class="styled-input py-2 h-12 w-full lg:w-[16rem]"
               name=""
               id=""
-              placeholder="Budget in USD"
+              placeholder="Budget"
             />
             <input
-              class="styled-input py-2 h-12"
+              class="styled-input py-2 h-12 w-full lg:w-[16rem]"
               name=""
               id=""
               placeholder="Phone"
             />
           </div>
-          <div class="mt-4 flex items-end space-x-3 w-full">
+          <div
+            class="mt-4 space-y-3 lg:flex lg:items-end lg:space-x-3 w-full lg:space-y-0"
+          >
             <input
-              class="styled-input py-2 h-12"
+              class="styled-input py-2 h-12 w-full lg:w-[16rem]"
               type="email"
               name=""
               id=""
@@ -134,7 +137,8 @@ import Services from "/services.jpeg";
               name=""
               id=""
               placeholder="Message"
-              class="styled-input py-4 resize-none h-12"></textarea>
+              class="styled-input py-4 resize-none h-16 w-full lg:w-[16rem]"
+            ></textarea>
           </div>
         </div>
         <button
@@ -161,8 +165,10 @@ import Services from "/services.jpeg";
     background: transparent;
     border-bottom: 1px solid white;
     color: white;
-    width: 16rem;
     margin-right: 1rem;
+  }
+  .styled-input:focus {
+    outline: none;
   }
   .styled-input::placeholder {
     color: white;

@@ -171,23 +171,19 @@ const Rocket = ({ ...props }) => {
       </motion.div>
       <motion.div
         animate={leftControl}
-        className="absolute origin-bottom left-1 -top-7 2xl:top-[0rem] 2xl:left-7"
+        className="absolute origin-bottom  -top-7 2xl:top-[0rem] left-7"
       >
         <img alt="rocket-img" src={SideImage} className="h-64 " />
       </motion.div>
       <motion.div
         animate={centerPlane}
-        className="absolute -top-[6rem] left-28  2xl:left-[4rem] 2xl:top-[-6rem]"
+        className="absolute  left-[4rem] top-[-6rem]"
       >
-        <img
-          alt="rocket-img"
-          src={PlaneImage}
-          className="h-[18rem] w-[7rem] 2xl:h-[23rem] 2xl:w-[8rem]"
-        />
+        <img alt="rocket-img" src={PlaneImage} className="h-[23rem] w-[8rem]" />
       </motion.div>
       <motion.div
         animate={rightControl}
-        className="absolute  -top-7 right-0  origin-bottom 2xl:top-0 2xl:right-8"
+        className="absolute  -top-7   origin-bottom 2xl:top-0 right-8"
       >
         <img alt="rocket-img" src={SideImage} className="h-64 " />
       </motion.div>

@@ -1,6 +1,16 @@
 import { useState } from "react";
 
-const JobCard = () => {
+interface propsType {
+  jobPosting: {
+    designation: string;
+    experience: string;
+    department: string;
+    requirements: string[];
+    responsibilities: string[];
+  };
+}
+
+const JobCard = ({ jobPosting }: propsType) => {
   const [isJobModalVisible, setIsJobModalVisible] = useState(false);
   const [isApplyJobModalVisible, setIsApplyJobModalVisible] = useState(false);
   return (
@@ -11,9 +21,9 @@ const JobCard = () => {
           className="text-[#2B8AAC]"
           onClick={() => setIsJobModalVisible(true)}
         >
-          Recruiter
+          {jobPosting.designation}
         </p>
-        <p>Talent Acquisition</p>
+        <p>{jobPosting.department}</p>
         <p
           className="text-[#2B8AAC]"
           onClick={() => setIsApplyJobModalVisible(true)}
@@ -29,31 +39,31 @@ const JobCard = () => {
           }}
         >
           <div
-            className="shadow-lg w-96 bg-white z-[200] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] px-4 pt-4 pb-6 rounded-lg"
+            className="shadow-lg w-96 bg-white z-[200] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] px-4 pt-4 pb-6 rounded-lg overflow-auto max-h-[80vh]"
             onClick={(e) => {
               e.stopPropagation();
             }}
           >
             <p>INDIA | NOIDA</p>
             <div className="my-8">
-              <p className="text-xl">Designation: Recruiter</p>
-              <p className="text-sm">Required Experience 4 - 6 years</p>
+              <p className="text-xl">Designation: {jobPosting.designation}</p>
+              <p className="text-sm">{`Required Experience ${jobPosting.experience}`}</p>
             </div>
-            <p className="text-sm my-6">Department: Talent Acquisition</p>
+            <p className="text-sm my-6">{`Department: ${jobPosting.department}`}</p>
             <p className="text-sm px-4">
               Responsibilities:
               <ul className="list-disc">
-                <li className="">
-                  To manage end to end recruitment life cycle from sourcing till
-                  validation i.e. job portals; social networking sites;
-                  headhunting & mapping of target companies to understand the
-                  available talent pool, referencing, joining of candidates etc.
-                </li>
-                <li> Solely responsible for complete account management.</li>
-                <li>
-                  Responsible for revenue generation and promoting employer
-                  brand
-                </li>
+                {jobPosting.responsibilities.map((item) => (
+                  <li className="">{item}</li>
+                ))}
+              </ul>
+            </p>
+            <p className="text-sm px-4">
+              Requirements:
+              <ul className="list-disc">
+                {jobPosting.requirements.map((item) => (
+                  <li className="">{item}</li>
+                ))}
               </ul>
             </p>
           </div>

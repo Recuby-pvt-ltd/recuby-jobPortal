@@ -1,5 +1,5 @@
 import Sun from "/circle.png";
-import Somke from "/smoke.gif";
+import Smoke from "/smoke.gif";
 import Stone from "/stone.png";
 import Stand from "/stand.png";
 import { useAnimation, motion } from "framer-motion";
@@ -41,8 +41,8 @@ const BackgroundScene = () => {
       />
       <motion.img
         animate={control}
-        src={Somke}
-        alt="somke"
+        src={Smoke}
+        alt="smoke"
         className="absolute bottom-0 right-0 z-30"
       />
       <motion.img

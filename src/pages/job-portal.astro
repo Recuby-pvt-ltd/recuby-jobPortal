@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Soon from "/soon.mp4";
+---
+
+<Layout title="Job portal">
+  <div class="container">
+    <video autoplay loop> <source src={Soon} type="video/mp4" /></video>
+  </div>
+</Layout>
+
+<style>
+  body,
+  html {
+    overflow-x: hidden;
+  }
+  .container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+</style>
