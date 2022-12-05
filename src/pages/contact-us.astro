@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/header/Header.astro";
+import Header from "../components/header";
 import Footer from "../components/footer/Footer.astro";
 import Smoke from "/smoke.gif";
 import Services from "/services.jpeg";
@@ -11,8 +11,9 @@ import WholeRocket from "/whole-rocket.png";
   <Header
     className="fixed top-0 w-screen z-[80] h-32 bg-transparent"
     activeTab={5}
+    client:load
   />
-  <section class="py-28 first-section relative">
+  <section class="py-28 first-section relative h-[65vh]">
     <div
       class="px-10 h-full justify-center flex flex-col md:pl-20 text-white space-y-10"
     >
@@ -29,11 +30,11 @@ import WholeRocket from "/whole-rocket.png";
     <img
       src={Services}
       alt="background"
-      class="absolute top-0 -z-10 h-[45vh] md:h-[65vh] w-screen object-cover md:object-fill"
+      class="absolute top-0 -z-10 h-[45vh] md:h-[65vh] w-screen object-cover lg:object-fill"
     />
   </section>
-  <section class="mt-[5rem] py-6">
-    <div class="h-full justify-center flex flex-col px-10 md:pl-20 text-white">
+  <section class="mt-[3rem]">
+    <div class="h-full justify-center flex flex-col px-10 lg:pl-20 text-white">
       <div class="pt-4">
         <h2 class="text-2xl gray-text-color font-semibold">
           <span>Contact Mission Control</span>
@@ -43,7 +44,7 @@ import WholeRocket from "/whole-rocket.png";
       </div>
     </div>
   </section>
-  <section class="w-full md:px-28 md:pb-24">
+  <section class="w-full px-5 lg:px-28 md:pb-24">
     <div class="w-full md:shadow-lg rounded-lg py-16 flex relative">
       <img
         src={WholeRocket}
@@ -59,27 +60,27 @@ import WholeRocket from "/whole-rocket.png";
       <div class="md:w-[500px] px-4">
         <form action="" class="space-y-3">
           <input
-            class="contact-page-form-input"
+            class="contact-page-form-input pl-[70px] md:pl-[50px] lg:pl-[70px]"
             type="text"
             placeholder="Full Name"
           />
           <input
-            class="contact-page-form-input"
+            class="contact-page-form-input pl-[70px] md:pl-[50px] lg:pl-[70px]"
             type="text"
             placeholder="Company Name"
           />
           <input
-            class="contact-page-form-input"
+            class="contact-page-form-input pl-[70px] md:pl-[50px] lg:pl-[70px]"
             type="text"
             placeholder="Budget"
           />
           <input
-            class="contact-page-form-input"
+            class="contact-page-form-input pl-[70px] md:pl-[50px] lg:pl-[70px]"
             type="text"
             placeholder="Phone*"
           />
           <input
-            class="contact-page-form-input"
+            class="contact-page-form-input pl-[70px] md:pl-[50px] lg:pl-[70px]"
             type="text"
             placeholder="Email"
           />
@@ -115,7 +116,6 @@ import WholeRocket from "/whole-rocket.png";
     width: 100%;
     height: 72px;
     border: none;
-    padding-left: 70px;
     color: black;
     font-size: 16px;
   }

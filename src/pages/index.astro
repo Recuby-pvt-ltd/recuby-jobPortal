@@ -3,22 +3,24 @@ import Layout from "../layouts/Layout.astro";
 import AnimateBackground from "../layouts/AnimateBackground";
 import Rocket from "@components/rocket";
 import BackgroundScene from "@components/backgroundScene";
-import Header from "../components/header/Header.astro";
+import Header from "../components/header";
 import Footer from "../components/footer/Footer.astro";
 import StartUpExpert from "/start-up-expert.jpg";
 import SoftwareProductHiring from "/access.png";
-import ExecutiveSearch from "/EXECUTIVE.png";
+import ExecutiveSearch from "/executive.png";
 import QualtiyTrust from "/quality-you-can-trust.png";
 import RecruitBetterWay from "/better-way-to-recruit-2.png";
 import YourSearch from "/your-search-our-solution-2.png";
 import SelectImg from "/select.png";
 import StarAnimate from "@components/starAnimate/StarAnimate.astro";
+import { AnimateBordersDiv } from "@components/AnimateBorder";
 ---
 
 <Layout title="Recuby">
   <Header
     className="fixed top-0 w-screen z-[80] bg-transparent"
     activeTab={1}
+    client:load
   />
   <div class="hidden lg:block">
     <Rocket
@@ -30,7 +32,7 @@ import StarAnimate from "@components/starAnimate/StarAnimate.astro";
   <AnimateBackground client:load>
     <section class="h-[100vh]">
       <div
-        class="h-full lg:pt-20 flex flex-col justify-center md:justify-start px-5 lg:pl-20 text-[#2B8AAC]"
+        class="h-full md:pt-20 flex flex-col justify-center md:justify-start px-5 lg:pl-20 text-[#2B8AAC]"
       >
         <div class="lg:w-[45%]">
           <p class="text-3xl font-semibold">Where Talent</p>
@@ -62,10 +64,11 @@ import StarAnimate from "@components/starAnimate/StarAnimate.astro";
     <StarAnimate />
     <section class="h-[100vh]">
       <div
-        class="h-full items-center lg:items-start flex flex-col lg:pl-20 text-white"
+        class="h-full items-center md:items-start flex flex-col md:px-5 lg:pl-20 text-white"
       >
-        <p class="lg:w-[95%] text-3xl font-semibold">Our Services</p>
+        <p class="md:w-[95%] text-3xl font-semibold">Our Services</p>
         <div class="border-white bg-white border-2 w-1/5 mt-4"></div>
+
         <div class="grid grid-cols-2 my-16 text-center lg:w-2/5">
           <div
             class="px-8 py-2 lg:py-16 border-r-2 border-b-2 flex flex-col justify-center items-center"
@@ -218,7 +221,7 @@ import StarAnimate from "@components/starAnimate/StarAnimate.astro";
             </div>
           </form>
         </div>
-        <div class="mt-4 space-y-3 lg:flex flex-col lg:items-start w-[35vw]">
+        <div class="mt-4 space-y-3 lg:flex flex-col lg:items-start lg:w-[35vw]">
           <textarea
             name=""
             id=""

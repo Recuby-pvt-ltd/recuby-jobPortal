@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/header/Header.astro";
+import Header from "../components/header/";
 import Footer from "../components/footer/Footer.astro";
 import ConultImg from "/consult.png";
 import AccessImg from "/access.png";
@@ -20,8 +20,9 @@ import Smoke from "/smoke.gif";
   <Header
     className="fixed top-0 w-screen z-[80] h-32 bg-transparent"
     activeTab={2}
+    client:load
   />
-  <section class="py-28 first-section relative">
+  <section class="py-28 first-section h-[65vh] relative">
     <div
       class="px-10 h-full justify-center flex flex-col md:pl-20 text-white space-y-10"
     >
@@ -34,7 +35,7 @@ import Smoke from "/smoke.gif";
         <a href="/" class="home-anchor-with-line">Home</a><span></span>
         / About Us
       </p>
-      <div class="text-white md:text-lg lg:text-xs md:w-[40rem]">
+      <div class="text-white md:text-lg lg:text-base md:w-[40rem]">
         <p>
           We're a team of young and talented recruiters who have mastered the
           art of recruitment.Try our services today and become a part of a
@@ -45,13 +46,13 @@ import Smoke from "/smoke.gif";
     <img
       src={Services}
       alt="background"
-      class="absolute top-0 -z-10 h-[65vh] w-screen object-cover md:object-fill"
+      class="absolute top-0 -z-10 h-[65vh] w-screen object-cover lg:object-fill"
     />
   </section>
   <section class="mt-14 py-10">
     <div class="flex items-center relative w-full">
       <div
-        class="h-full justify-center flex flex-col px-10 md:pl-20 text-white"
+        class="h-full justify-center flex flex-col px-10 lg:pl-20 text-white"
       >
         <div class="pt-4">
           <h2 class="text-2xl gray-text-color font-semibold">
@@ -61,7 +62,7 @@ import Smoke from "/smoke.gif";
         <div class="border-[#515a69] bg-[#515a69] border-2 w-2/5 md:w-1/6 my-2">
         </div>
         <div
-          class="gray-text-color md:text-lg lg:text-xs md:w-[25rem] space-y-2"
+          class="gray-text-color md:text-lg lg:text-sm md:w-[25rem] space-y-2"
         >
           <p>
             Recuby is here to save you from the endless and hectic hiring
@@ -77,7 +78,7 @@ import Smoke from "/smoke.gif";
           </p>
         </div>
       </div>
-      <div class="hidden lg:block h-[25rem] ml-[25rem]">
+      <div class="hidden md:block h-[25rem] lg:ml-[25rem]">
         <img src={WholeRocket} alt="rocket" class="h-full" />
       </div>
       <img
@@ -92,29 +93,29 @@ import Smoke from "/smoke.gif";
       <h2 class="font-semibold text-2xl py-2 tracking-wide">
         <span>Positions We Hire</span>
       </h2>
-      <div class="w-full px-5 md:px-16 flex">
+      <div class="w-full px-5 lg:px-16 flex">
         <div class="text-left space-y-4">
-          <h2><span class="text-sm">Software engineers</span></h2>
-          <h2><span class="text-sm">UI/UX designers</span></h2>
-          <h2><span class="text-sm">Tech leads</span></h2>
-          <h2><span class="text-sm">Engineering managers</span></h2>
-          <h2><span class="text-sm">Software developers in testing</span></h2>
+          <h2><span class="text-base">Software engineers</span></h2>
+          <h2><span class="text-base">UI/UX designers</span></h2>
+          <h2><span class="text-base">Tech leads</span></h2>
+          <h2><span class="text-base">Engineering managers</span></h2>
+          <h2><span class="text-base">Software developers in testing</span></h2>
           <h2>
-            <span class="text-sm">QA engineers, Big data developers</span>
+            <span class="text-base">QA engineers, Big data developers</span>
           </h2>
-          <h2><span class="text-sm">DevOps engineers</span></h2>
+          <h2><span class="text-base">DevOps engineers</span></h2>
         </div>
         <div class="hidden md:block absolute-center">
-          <img src={ChartImg} alt="chart" class="h-[700px]" />
+          <img src={ChartImg} alt="chart" class="h-[700px] aspect-square" />
         </div>
         <div class="text-right space-y-4 ml-auto">
-          <h2><span class="text-sm">Architects,</span></h2>
-          <h2><span class="text-sm">Principle software architects</span></h2>
-          <h2><span class="text-sm">Product Managers</span></h2>
-          <h2><span class="text-sm">Program Manager</span></h2>
-          <h2><span class="text-sm">Project Managers</span></h2>
-          <h2><span class="text-sm">Business/data Analys</span></h2>
-          <h2><span class="text-sm">Data Scientists</span></h2>
+          <h2><span class="text-base">Architects,</span></h2>
+          <h2><span class="text-base">Principle software architects</span></h2>
+          <h2><span class="text-base">Product Managers</span></h2>
+          <h2><span class="text-base">Program Manager</span></h2>
+          <h2><span class="text-base">Project Managers</span></h2>
+          <h2><span class="text-base">Business/data Analys</span></h2>
+          <h2><span class="text-base">Data Scientists</span></h2>
         </div>
       </div>
     </div>
@@ -125,10 +126,10 @@ import Smoke from "/smoke.gif";
         <span class="text-shadow">How do we make it happen?</span>
       </h2>
       <div
-        class="w-full pl-24 md:px-16 md:py-24 text-left grid grid-cols-1 lg:flex lg:justify-end md:grid md:grid-cols-2"
+        class="w-full pl-24 justify-center lg:px-16 lg:py-24 text-left grid grid-cols-1 lg:flex lg:justify-end md:grid md:grid-cols-2"
       >
         <div class="min-w-[20vw] my-5 md:my-0">
-          <img src={ConultImg} alt="consult" width="100px" />
+          <img src={ConultImg} alt="consult" width="150px" />
           <p class="fourth-section-subheading">CONSULT</p><div
             class="space-y-3 text-sm"
           >
@@ -150,7 +151,7 @@ import Smoke from "/smoke.gif";
           </div>
         </div>
         <div class="min-w-[20vw] my-5 md:my-0">
-          <img src={AccessImg} alt="access" width="100px" />
+          <img src={AccessImg} alt="access" width="150px" />
           <p class="fourth-section-subheading">ACCESS</p><div
             class="space-y-3 text-sm text-left"
           >
@@ -167,7 +168,7 @@ import Smoke from "/smoke.gif";
         </div>
 
         <div class="min-w-[20vw] my-5 md:my-0">
-          <img src={SelectImg} alt="select" width="100px" />
+          <img src={SelectImg} alt="select" width="150px" />
           <p class="fourth-section-subheading my-1">SELECT</p><div
             class="space-y-3 text-sm"
           >
@@ -187,7 +188,7 @@ import Smoke from "/smoke.gif";
           </div>
         </div>
         <div class="min-w-[20vw] my-5 md:my-0">
-          <img src={OnboardImg} alt="onboard" width="100px" />
+          <img src={OnboardImg} alt="onboard" width="150px" />
           <p class="fourth-section-subheading">ONBOARD</p><div
             class="space-y-3 text-sm"
           >
@@ -356,17 +357,6 @@ import Smoke from "/smoke.gif";
   .gray-text-color {
     color: #515a69;
   }
-  .styled-bullet-one::before {
-    content: "";
-    background-color: #fcb813;
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    top: 2px;
-    position: relative;
-    border-radius: 50% 0% 0% 50%;
-    left: -2px;
-  }
   .styled-bullet-two::before {
     content: "";
     background-color: #00b4d5;
@@ -374,9 +364,9 @@ import Smoke from "/smoke.gif";
     width: 15px;
     height: 15px;
     top: 2px;
-    left: -5px;
     position: relative;
-    border-radius: 50% 50% 0% 0%;
+    border-radius: 50% 0% 0% 50%;
+    left: -2px;
   }
 
   .fourth-section-subheading {

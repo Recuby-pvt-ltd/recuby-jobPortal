@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/header/Header.astro";
+import Header from "../components/header";
 import Footer from "../components/footer/Footer.astro";
 import Services from "/services.jpeg";
 import JobCard from "@components/careerPageCard";
@@ -16,10 +16,11 @@ import technicalRecruiterLvl1 from "../../public/career-page-content/technical-r
   <Header
     className="fixed top-0 w-screen z-[80] h-32 bg-transparent"
     activeTab={4}
+    client:load
   />
-  <section class="py-28 first-section relative">
+  <section class="py-28 first-section h-[65vh] relative">
     <div
-      class="px-10 h-full justify-center flex flex-col md:pl-20 text-white space-y-10"
+      class="px-10 h-full justify-center flex flex-col lg:pl-20 text-white space-y-10"
     >
       <div class="w-[45%] pt-16">
         <h1 class="text-2xl md:text-4xl lg:text-7xl font-bold heading-shadow">
@@ -44,16 +45,16 @@ import technicalRecruiterLvl1 from "../../public/career-page-content/technical-r
     <img
       src={Services}
       alt="background"
-      class="absolute top-0 -z-10 h-[65vh] w-screen object-cover md:object-fill"
+      class="absolute top-0 -z-10 h-[65vh] w-screen object-cover lg:object-fill"
     />
   </section>
   <section class="bg-white">
     <div class="w-full">
       <div
-        class="w-full md:pl-24 md:px-16 md:py-24 text-left grid grid-cols-1 md:grid md:grid-cols-3"
+        class="w-full lg:pl-24 lg:px-16 md:py-24 text-left grid grid-cols-1 md:grid md:grid-cols-3"
       >
         <JobCard client:load jobPosting={technicalRecruiterLvl1} />
-        <JobCard client:load jobPosting={teamLeadLvl3} />
+        <JobCard client:load jobPosting={leadRecruiterLvl2} />
         <JobCard client:load jobPosting={seniorTechnicalRecruiterLvl2} />
         <JobCard client:load jobPosting={teamLeadLvl3} />
         <JobCard client:load jobPosting={managerLvl4} />

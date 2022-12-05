@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/header/Header.astro";
+import Header from "../components/header";
 import Footer from "../components/footer/Footer.astro";
 import ConultImg from "/consult.png";
 import AssessImg from "/assess.png";
@@ -13,8 +13,9 @@ import Services from "/services.jpeg";
   <Header
     className="fixed top-0 w-screen z-[80] h-32 bg-transparent"
     activeTab={3}
+    client:load
   />
-  <section class="py-28 first-section relative">
+  <section class="py-28 first-section relative h-[65vh]">
     <div
       class="px-10 h-full justify-center flex flex-col md:pl-20 text-white space-y-10"
     >
@@ -39,16 +40,16 @@ import Services from "/services.jpeg";
     <img
       src={Services}
       alt="background"
-      class="absolute top-0 -z-10 h-[65vh] w-screen object-cover md:object-fill"
+      class="absolute top-0 -z-10 h-[65vh] w-screen object-cover lg:object-fill"
     />
   </section>
   <section class="py-12 bg-white">
     <div class="w-full text-center">
-      <h2 class="font-semibold text-2xl tracking-wide md:my-2 blue-color-text">
+      <h2 class="font-semibold text-2xl tracking-wide lg:my-2 blue-color-text">
         <span class="text-shadow">Services We Provide</span>
       </h2>
       <div
-        class="w-full px-5 md:pl-24 md:px-16 md:py-24 text-center grid grid-cols-1 lg:flex md:grid md:grid-cols-2"
+        class="w-full px-5 md:pl-24 md:px-16 md:py-5 lg:py-24 text-center grid grid-cols-1 gap-3 lg:flex md:grid md:grid-cols-2"
       >
         <div
           class="min-w-[20vw] my-5 md:my-0 flex flex-col items-center justify-center"
