@@ -77,7 +77,7 @@ const JobCard = ({ jobPosting }: propsType) => {
           }}
         >
           <div
-            className="shadow-lg w-96 bg-white z-[200] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] px-4 pt-4 pb-6 rounded-lg"
+            className="max-h-[80vh] shadow-lg w-96 bg-white z-[200] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] px-4 pt-4 pb-6 rounded-lg overflow-auto"
             onClick={(e) => {
               e.stopPropagation();
             }}

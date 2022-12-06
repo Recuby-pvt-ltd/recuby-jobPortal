@@ -13,7 +13,6 @@ import RecruitBetterWay from "/better-way-to-recruit-2.png";
 import YourSearch from "/your-search-our-solution-2.png";
 import SelectImg from "/select.png";
 import StarAnimate from "@components/starAnimate/StarAnimate.astro";
-import { AnimateBordersDiv } from "@components/AnimateBorder";
 ---
 
 <Layout title="Recuby">
@@ -30,7 +29,7 @@ import { AnimateBordersDiv } from "@components/AnimateBorder";
     <BackgroundScene client:load />
   </div>
   <AnimateBackground client:load>
-    <section class="h-[100vh]">
+    <section class="min-h-[100vh] mt-[10rem] md:mt-0">
       <div
         class="h-full md:pt-20 flex flex-col justify-center md:justify-start px-5 lg:pl-20 text-[#2B8AAC]"
       >
@@ -62,7 +61,7 @@ import { AnimateBordersDiv } from "@components/AnimateBorder";
       </div>
     </section>
     <StarAnimate />
-    <section class="h-[100vh]">
+    <section class="min-h-[100vh]">
       <div
         class="h-full items-center md:items-start flex flex-col md:px-5 lg:pl-20 text-white"
       >
@@ -113,7 +112,7 @@ import { AnimateBordersDiv } from "@components/AnimateBorder";
         </div>
       </div>
     </section>
-    <section class="h-[100vh]">
+    <section class="min-h-[100vh] mt-[3rem] md:mt-0">
       <div class="h-full justify-center flex flex-col px-5 lg:pl-20 text-white">
         <p class="w-[95%] text-3xl font-semibold">
           Find a Perfect Professional Match!
@@ -151,7 +150,7 @@ import { AnimateBordersDiv } from "@components/AnimateBorder";
         </div>
       </div>
     </section>
-    <section class="h-[100vh]">
+    <section class="h-[80vh] md:min-h-[100vh]">
       <div class="h-full justify-center flex flex-col px-5 lg:pl-20 text-white">
         <p class="w-[95%] text-3xl font-semibold">Mission</p>
         <div class="border-white bg-white border-2 w-1/5 mt-4"></div>
@@ -169,7 +168,7 @@ import { AnimateBordersDiv } from "@components/AnimateBorder";
         </div>
       </div>
     </section>
-    <section class="h-[90vh] lg:h-[100vh]">
+    <section class="h-[90vh] lg:min-h-[100vh]">
       <div class="h-full justify-center flex flex-col px-5 lg:pl-20 text-white">
         <p class="w-[95%] text-3xl font-semibold">Vision</p>
         <div class="border-white bg-white border-2 w-1/5 mt-4"></div>
@@ -184,7 +183,7 @@ import { AnimateBordersDiv } from "@components/AnimateBorder";
         </div>
       </div>
     </section>
-    <section class="h-[100vh]">
+    <section class="min-h-[100vh]">
       <div class="h-full justify-center flex flex-col px-5 lg:pl-20 text-white">
         <p class="w-[95%] text-3xl font-semibold">Contact</p>
         <div class="border-white bg-white border-2 w-1/5 mt-4"></div>
