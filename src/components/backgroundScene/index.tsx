@@ -37,7 +37,7 @@ const BackgroundScene = () => {
         animate={control}
         src={Sun}
         alt="yellow-circle"
-        className="absolute top-64 right-[1vw] 2xl:right-[-5rem] z-0 w-[60%]"
+        className="absolute top-64 right-[-3rem] z-0 w-[50vw]"
       />
       <motion.img
         animate={control}
