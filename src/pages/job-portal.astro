@@ -4,7 +4,7 @@ import Soon from "/soon.mp4";
 ---
 
 <Layout title="Job portal">
-  <div class="container">
+  <div class="black-bg">
     <video autoplay loop> <source src={Soon} type="video/mp4" /></video>
   </div>
 </Layout>
@@ -13,8 +13,10 @@ import Soon from "/soon.mp4";
   body,
   html {
     overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
   }
-  .container {
+  .black-bg {
     display: flex;
     width: 100vw;
     height: 100vh;
