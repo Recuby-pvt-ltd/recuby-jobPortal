@@ -30,8 +30,8 @@ const Header = ({ className, activeTab }: propTypes) => {
           </svg>
         </button>
         {showHeaderDropDown && (
-          <div className="fixed shadow-lg flex-col top-20 z-[9999999] w-[90%] p-[5%] bg-white border-t-4 border-[#00b4d5]">
-            <nav className="space-y-5">
+          <div className="fixed shadow-lg flex-col top-20 left-0 min-h-full z-[9999999] w-[100%] p-[5%] bg-white border-t-4 border-[#00b4d5]">
+            <nav className="space-y-[2rem]">
               <div>
                 <a
                   className={
