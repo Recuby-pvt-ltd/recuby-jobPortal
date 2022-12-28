@@ -8,15 +8,7 @@ interface propTypes {
 
 const Header = ({ className, activeTab }: propTypes) => {
   const [showHeaderDropDown, setShowHeaderDropDown] = useState(false);
-  <!-- Google tag (gtag.js) -->
-  async src="https://www.googletagmanager.com/gtag/js?id=UA-252815904-1"
-  
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-252815904-1');
-
+ 
   return (
     <header className={className}>
       <div className="px-6 py-4 flex justify-between items-center z-20 bg-white">
